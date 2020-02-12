@@ -1,36 +1,29 @@
-%% MIDI-D': the metacognitive measure no-one asked for
-% 
-% Sonifies the relationship between accuracy and confidence data.
-%
-% INPUT(vectors):
-% `signal` - ground-truth classified as present (1) or absent (0)
-% `decision` - first-order judgments classified as present (1) or absent (0)
-% `confidence` - integer confidence ratings, ideally from 1=low to 4=high
-%
-% MIDI-d' was developed with 4-level confidence ratings in mind and employs
-% frequency-modulation to generate a complex harmonic waveform. It works
-% with fewer levels but won't sound as harmonically rich. With more levels
-% the timbre will become increasingly metallic.
-%
-% NOTE:
-% MIDI-d' employs MATLAB's internal MIDI/audio tools , available in the
-% MATLAB Audio Toolbox. There were substantial updates to Audio Toolbox in
-% the MATLAB 2018a release. These permit MIDI send and receive messages, a
-% requirement for MIDI-d' to work.
-% tl;dr - you'll need Audio Toolbox in MATLAB 2018a or above
-%
-% MIDI-d' was developed with financial support from Melbourne-Monash
-% Consciousness Research as part of the 'Music To My Ears' project:
-% Julian Matthews, Mitch Catterall, Patrick Cooper, Thomas Andrillon, William Wong
-%
-% Visit MMCR (@MMConsciousness) on Twitter or Facebook to learn more.
-%
-% 02/2020 Julian Matthews (@quined_quales) made it
-% 02/2020 Patrick Cooper (@neurocoops) tested it
-
 function MIDIdprime( signal , decision , confidence )
+%MIDIDPRIME: the metacognitive measure no-one asked for
+%   Sonifies the relationship between accuracy and confidence data.
+%
+%   MIDIDPRIME(signal,decision,confidence) where args are vectors.
+%
+%   `signal` - ground-truth (e.g., present=1,absent=0)
+%   `decision` - first-order judgments (e.g., present=1,absent=0)
+%   `confidence` - confidence ratings (e.g., 1=low to 4=high)
+%
+%   MIDI-d' was developed with 4-level confidence ratings in mind but
+%   employs additive synthesis to generate complex harmonic waveforms.
+%   With a greater breadth of confidence ratings these waveforms will
+%   become increasingly rich but also more challenging to distinguish.
+%
+%   MIDI-d' was developed with financial support from Melbourne-Monash
+%   Consciousness Research as part of the 'Music To My Ears' project:
+%   J.Matthews, M.Catterall, P.Cooper, T.Andrillon, W.Wong
+%
+%   Visit MMCR (@MMConsciousness) on Twitter or Facebook to learn more.
+%
+%   02/2020 Julian (@quined_quales) made it
+%   02/2020 Patrick (@neurocoops) tested it
 
-dbstop if error
+% Modify `harmonics` to increase/decrease the richness of the tones to taste
+harmonics = 10;
 
 % Confirm inputs are vectors
 if ~isvector(signal)
@@ -41,10 +34,6 @@ elseif ~isvector(confidence)
     disp('`confidence` needs to be a vector');
 end
 
-if length(unique(confidence)) > 4
-    disp('MIDIdprime works best with 4 confidence levels, see `notes`');
-end
-
 %% LET'S GET GOING
 % Confirm inputs are same dimensions
 if isequal(size(signal),size(decision)) && ...
@@ -53,40 +42,40 @@ if isequal(size(signal),size(decision)) && ...
     % Confirm absolute confidence
     confidence = abs(confidence);
     
-    % Play music through MATLAB's audioDeviceWriter
+    % Play audio through MATLAB's audioDeviceWriter
     deviceWriter = audioDeviceWriter('SampleRate',44100);
-    
-    % Preliminaries
-    channel = 1;
-    note = 64;
-    velocity = 32;
-    
-    msg = midimsg('NoteOn',channel,note,velocity);
-    amplitude = msg(1).Velocity/127;
     
     for trial = 1:length(signal)
         
         if isequal(signal(trial),decision(trial))
-            frequency = [(440 * 2^((msg.Note-42)/12)),...
-                (440 * 2^((msg.Note-90)/12)),...
-                (440 * 2^((msg.Note-54)/12)),...
-                (440 * 2^((msg.Note-66)/12)),...
-                (440 * 2^((msg.Note-51)/6))];
-            
-            the_tones = confidence(trial) + 1;
-            
+            % Build square wave from sines
+            % Odd harmonics
+            while 1
+                temp = 1:2:((harmonics*confidence(trial))+1);
+                if length(temp) < 200
+                    break
+                else
+                    harmonics = harmonics-1;
+                end
+            end
         else
-            frequency = [(440 * 2^((msg.Note-42)/32)),...
-                (440 * 2^((msg.Note-54)/13)),...
-                (440 * 2^((msg.Note-47)/20)),...
-                (440 * 2^((msg.Note-66)/12)),...
-                (440 * 2^((msg.Note-53)/6))];
-            
-            the_tones = confidence(trial);
+            % Build sawtooth wave from sines
+            % Every harmonic
+            while 1
+                temp = 1:(harmonics*(confidence(trial))/2);
+                if length(temp) < 200
+                    break
+                else
+                    harmonics = harmonics-1;
+                end
+            end
         end
         
+        frequency = temp*100;
+        amplitude = 1./temp;
+        
         osc = audioOscillator('SignalType','sine','Frequency',...
-            frequency,'Amplitude',amplitude,'NumTones',the_tones,...
+            frequency,'Amplitude',amplitude*.7,'NumTones',length(frequency),...
             'SampleRate',44100);
         
         tic
