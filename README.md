@@ -12,7 +12,7 @@
 ***
 
 ## What is this?
-**`MIDI-d'`** is a MATLAB function that sonifies the relationship between first-order and second-order behavioural judgments using [additive synthesis](https://en.wikipedia.org/wiki/Additive_synthesis). Metacognitive hits or misses of different magnitude are associated with increasingly complex harmonic tones. Hits build a warm squarewave and misses a sharp sawtoothwave. 
+**`MIDI-d'`** is a MATLAB function that sonifies the relationship between first-order and second-order behavioural judgments using [additive synthesis](https://en.wikipedia.org/wiki/Additive_synthesis)*. Metacognitive hits or misses of different magnitude are associated with increasingly complex harmonic tones. Hits build a warm squarewave and misses a sharp sawtoothwave. 
 
 Our hope is that by sonifying a sequence of behavioural trials you might detect patterns of confidence and/or accuracy that would not otherwise be obvious were they represented in other modalities.
 
@@ -36,6 +36,9 @@ These are your participant's second-order judgments, typically ratings of confid
 ***
 
 ![alt_text][avatar]
+
+
+###### *OK, sure, it's not MIDI but the pun was irresistible.
 
 [MIDIdprime]: ../master/wowzers.png "MIDI-d'"
 [logo]: ../master/1500x500.jpeg "Melbourne Monash Consciousness Research"
