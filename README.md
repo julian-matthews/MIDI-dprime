@@ -1,4 +1,3 @@
-![alt_text][MIDIdprime]
 ![alt_text][logo]
 
 # `MIDI-d'`
@@ -9,6 +8,8 @@
 ###### *"The metacognitive measure that no-one asked for"*
 
 ***
+
+![alt_text][MIDIdprime]
 
 ## What is this?
 **`MIDI-d'`** is a MATLAB function that sonifies the relationship between first-order and second-order behavioural judgments using [FM-synthesis](https://en.wikipedia.org/wiki/Frequency_modulation_synthesis). Metacognitive hits or misses of different magnitude are associated with increasingly complex tones. Hits build a pleasant harmonic and misses a dissonant clang. 
