@@ -1,3 +1,4 @@
+![alt_text][MIDIdprime]
 ![alt_text][logo]
 
 # `MIDI-d'`
@@ -36,5 +37,6 @@ These are your participant's second-order judgments, typically ratings of confid
 
 ![alt_text][avatar]
 
+[MIDIdprime]: ../master/wowzers.png "MIDI-d'"
 [logo]: ../master/1500x500.jpeg "Melbourne Monash Consciousness Research"
 [avatar]: https://avatars0.githubusercontent.com/u/18410581?v=3&s=96 "@quined_quales"
