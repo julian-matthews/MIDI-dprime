@@ -1,12 +1,13 @@
-![alt_text][logo]
 ![alt_text][MIDIdprime]
+![alt_text][logo]
 
 # `MIDI-d'`
-#### [Julian Matthews](https://twitter.com/quined_quales), Mitch Catterall, [Thomas Andrillon](https://twitter.com/thandrillon), [Patrick Cooper](https://twitter.com/neurocoops), William Wong
+
+###### *"The metacognitive measure that no-one asked for"*
 
 ***
 
-###### *"The metacognitive measure that no-one asked for"*
+#### [Julian Matthews](https://twitter.com/quined_quales), Mitch Catterall, [Thomas Andrillon](https://twitter.com/thandrillon), [Patrick Cooper](https://twitter.com/neurocoops), William Wong
 
 ***
 
