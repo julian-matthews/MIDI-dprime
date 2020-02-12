@@ -28,5 +28,5 @@ Ensure `MIDIdprime.m` is in your current workspace or MATLAB Path. The function 
 
 ![alt_text][avatar]
 
-[logo]: https://cogphillab.files.wordpress.com/2018/08/header1.jpg "Melbourne Monash Consciousness Research"
+[logo]: ../master/1500x1500.png "Melbourne Monash Consciousness Research"
 [avatar]: https://avatars0.githubusercontent.com/u/18410581?v=3&s=96 "Julian Matthews"
