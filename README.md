@@ -25,9 +25,12 @@ Our hope is that by sonifying a sequence of behavioural trials you might detect 
 ## Getting started
 Ensure `MIDIdprime.m` is in your current workspace or MATLAB Path. The function takes three vectors as inputs: 
 
-1. `signal` - this is the "ground-truth" corresponding to whether the stimulus (stimulus feature) was present (`1`) or absent (`0`) on that trial. It's usually a vector of 1s and 0s that is as long as your trial sequence.
-1. `decision` - these are your participant's first-order judgments of stimulus presence (`1`) or absence (`0`). It's usually a vector of 1s and 0s that is as long as your trial sequence (and therefore the same length as `signal`).
-1. `confidence` - these are your participant's second-order judgments, typically ratings of confidence or perceptual awareness. `MIDI-d'` was developed with 4 levels of confidence in mind (where 1=low and 4=high) but will work with more/fewer levels.
+###### 1. `signal`
+This is the "ground-truth" corresponding to whether the stimulus (or stimulus feature) was present (1) or absent (0) on that trial. It's usually a vector of 1s and 0s that is as long as your trial sequence.
+###### 2. `decision`
+These are your participant's first-order judgments of stimulus presence (1) or absence (0). It's usually a vector of 1s and 0s that is as long as your trial sequence (and therefore the same length as `signal`).
+###### 3. `confidence`
+These are your participant's second-order judgments, typically ratings of confidence or perceptual awareness. **`MIDI-d'`** was developed with four levels of confidence in mind (where 1=low and 4=high) but will work with more/fewer levels.
 
 ***
 
