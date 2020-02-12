@@ -23,7 +23,7 @@ Our hope is that by sonifying a sequence of behavioural trials you might detect 
 * [MATLAB Audio Toolbox](https://mathworks.com/products/audio.html)
 
 ## Getting started
-Ensure `MIDIdprime.m` is in your current workspace or MATLAB Path. The function takes three vectors as inputs: 
+Ensure [`MIDIdprime.m`](./MIDIdprime.m) is in your current workspace or MATLAB Path. The function takes three vectors as inputs: 
 
 ###### 1. `signal`
 This is the "ground-truth" corresponding to whether the stimulus (or stimulus feature) was present (1) or absent (0) on that trial. It's usually a vector of 1s and 0s that is as long as your trial sequence.
