@@ -12,9 +12,9 @@
 ![alt_text][MIDIdprime]
 
 ## What is this?
-**`MIDI-d'`** is a MATLAB function that sonifies the relationship between first-order and second-order behavioural judgments using [FM-synthesis](https://en.wikipedia.org/wiki/Frequency_modulation_synthesis). Metacognitive hits or misses of different magnitude are associated with increasingly complex tones. Hits build a pleasant harmonic and misses a dissonant clang. 
+**`MIDI-d'`** is a MATLAB function that sonifies the relationship between first-order and second-order behavioural judgments using [additive synthesis](https://en.wikipedia.org/wiki/Additive_synthesis). Metacognitive hits or misses of different magnitude are associated with increasingly complex tones. Hits build a pleasant harmonic and misses a dissonant clang. 
 
-Our hope is that by sonifying a sequence of behavioural trials you might detect patterns of confidence and/or accuracy that would not otherwise be obvious where they represented in other modalities. Also, I love the [Yamaha DX7](https://en.wikipedia.org/wiki/Yamaha_DX7). 
+Our hope is that by sonifying a sequence of behavioural trials you might detect patterns of confidence and/or accuracy that would not otherwise be obvious where they represented in other modalities.
 
 ## Background
 **`MIDI-d'`** was developed with financial support from **Melbourne-Monash Consciousness Research** as part of the 'Music To My Ears' project. Visit **MMCR** on [Twitter](https://twitter.com/MMConsciousness) or [Facebook](https://www.facebook.com/mmcr.edu.au/) to learn more.
