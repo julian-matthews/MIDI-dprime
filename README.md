@@ -13,6 +13,8 @@
 ## What is this?
 **`MIDI-d'`** is a MATLAB function that sonifies the relationship between first-order and second-order behavioural judgments using [additive synthesis](https://en.wikipedia.org/wiki/Additive_synthesis)*. Metacognitive hits or misses of different magnitude are associated with increasingly complex harmonic tones. [Hits build a warm squarewave and misses a sharp sawtoothwave](http://beausievers.com/synth/synthbasics/). 
 
+![alt_text][examplewave]
+
 Our hope is that by sonifying a sequence of behavioural trials you might detect patterns of confidence and/or accuracy that would not otherwise be obvious were they represented in other modalities.
 
 ## Background
@@ -33,7 +35,7 @@ These are your participant's first-order judgments of stimulus presence (1) or a
 These are your participant's second-order judgments, typically ratings of confidence or perceptual awareness. **`MIDI-d'`** was developed with four levels of confidence in mind (where 1=low and 4=high) but will work with more/fewer levels due to some audio trickery.
 
 ## Testmode
-To sample the eight tones generated during development of this function include an optional fourth argument (e.g., `MIDIdprime(1,1,1,1)`). This will generate each tone in sequence from a large metacognitive hit (high confidence correct response) to a large metacognitive miss (high confidence incorrect response), 
+To sample the eight tones generated during development of this function include an optional fourth argument (e.g., `MIDIdprime(1,1,1,1)`). This will generate each tone in sequence from a large metacognitive hit (high confidence correct response) to a large metacognitive miss (high confidence incorrect response). A recording of this transition is included in this repository [here](./example.wav).
 
 ***
 
@@ -43,4 +45,5 @@ To sample the eight tones generated during development of this function include 
 ###### *OK, sure, it's not MIDI but the pun was irresistible.
 
 [logo]: ../master/1500x500.jpeg "Melbourne Monash Consciousness Research"
+[examplewave]: ../master/examplewav.png "Transition from squarewave into sawtoothwave"
 [avatar]: https://avatars0.githubusercontent.com/u/18410581?v=3&s=96 "@quined_quales"
