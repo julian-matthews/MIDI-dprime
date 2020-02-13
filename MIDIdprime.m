@@ -1,4 +1,4 @@
-function MIDIdprime( signal , decision , confidence )
+function MIDIdprime( signal , decision , confidence , ~ )
 %MIDIDPRIME: the metacognitive measure no-one asked for
 %   Sonifies the relationship between accuracy and confidence data.
 %
@@ -13,6 +13,11 @@ function MIDIdprime( signal , decision , confidence )
 %   With a greater breadth of confidence ratings these waveforms will
 %   become increasingly rich but also more challenging to distinguish.
 %
+%   MIDIDPRIME(~,~,~,testmode) optional arg `testmode` activates testmode.
+%   MIDI-d' will synthesise eight tones starting from a large magnitude
+%   metacognitive hit (high confidence + correct) to a large magnitude
+%   metacognitive miss (high confidence + incorrect). 
+%
 %   MIDI-d' was developed with financial support from Melbourne-Monash
 %   Consciousness Research as part of the 'Music To My Ears' project:
 %   J.Matthews, M.Catterall, P.Cooper, T.Andrillon, W.Wong
@@ -24,6 +29,23 @@ function MIDIdprime( signal , decision , confidence )
 
 % Modify `harmonics` to increase/decrease the richness of the tones to taste
 harmonics = 10;
+
+if nargin == 4
+    % flagged test mode, builds false data for each outcome
+    signal = ones(1,8);
+    decision = horzcat(ones(1,4),zeros(1,4));
+    confidence = [4,3,2,1,1,2,3,4];
+    
+    % Increase timing to sample tones
+    each_time = 1;
+    end_time = each_time;
+elseif nargin == 3
+    % Regular mode, usual timing
+    each_time = 0.25;
+    end_time = 0.65;
+else
+    disp('You''re missing an argument: signal, decision, confidence?')
+end
 
 % Confirm inputs are vectors
 if ~isvector(signal)
@@ -80,12 +102,12 @@ if isequal(size(signal),size(decision)) && ...
         
         tic
         if trial ~= length(signal)
-            while toc < 0.2
+            while toc < each_time
                 synthesizedAudio = osc();
                 deviceWriter(synthesizedAudio);
             end
         else
-            while toc < 0.65
+            while toc < end_time
                 synthesizedAudio = osc();
                 deviceWriter(synthesizedAudio);
             end
