@@ -1,4 +1,3 @@
-![alt_text][MIDIdprime]
 ![alt_text][logo]
 
 # `MIDI-d'`
@@ -43,6 +42,5 @@ To sample the eight tones generated during development of this function include 
 
 ###### *OK, sure, it's not MIDI but the pun was irresistible.
 
-[MIDIdprime]: ../master/wowzers.png "MIDI-d'"
 [logo]: ../master/1500x500.jpeg "Melbourne Monash Consciousness Research"
 [avatar]: https://avatars0.githubusercontent.com/u/18410581?v=3&s=96 "@quined_quales"
