@@ -33,6 +33,9 @@ These are your participant's first-order judgments of stimulus presence (1) or a
 ###### 3. `confidence`
 These are your participant's second-order judgments, typically ratings of confidence or perceptual awareness. **`MIDI-d'`** was developed with four levels of confidence in mind (where 1=low and 4=high) but will work with more/fewer levels due to some audio trickery.
 
+## Testmode
+To sample the eight tones generated during development of this function include an optional fourth argument (e.g., `MIDIdprime(1,1,1,1)`). This will generate each tone in sequence from a large metacognitive hit (high confidence correct response) to a large metacognitive miss (high confidence incorrect response), 
+
 ***
 
 ![alt_text][avatar]
