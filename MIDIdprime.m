@@ -97,7 +97,7 @@ if isequal(size(signal),size(decision)) && ...
         amplitude = 1./temp;
         
         osc = audioOscillator('SignalType','sine','Frequency',...
-            frequency,'Amplitude',amplitude*.7,'NumTones',length(frequency),...
+            frequency,'Amplitude',amplitude,'NumTones',length(frequency),...
             'SampleRate',44100);
         
         tic
@@ -112,7 +112,6 @@ if isequal(size(signal),size(decision)) && ...
                 deviceWriter(synthesizedAudio);
             end
         end
-        
     end
     
     release(deviceWriter)
