@@ -23,6 +23,7 @@ Our hope is that by sonifying a sequence of behavioural trials you might detect 
 ## Required equipment
 
 * [MATLAB 2016a or higher](https://www.mathworks.com/products/matlab.html)
+* [MATLAB Audio Toolbox](https://www.mathworks.com/products/audio.html)
 
 ## Getting started
 Ensure [`MIDIdprime.m`](./MIDIdprime.m) is in your current workspace or MATLAB Path. The function takes three vectors as inputs: 
