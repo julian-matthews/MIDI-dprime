@@ -1,4 +1,4 @@
-![alt_text][logo]
+![alt_text][mtme]
 
 # `MIDI-d'`
 
@@ -40,11 +40,10 @@ To sample the eight tones generated during development of this function include 
 
 ***
 
-![alt_text][avatar]
-
+![alt_text][logo]
 
 ###### *OK, sure, it's not MIDI but the pun was irresistible.
 
 [logo]: ../master/1500x500.jpeg "Melbourne Monash Consciousness Research"
+[mtme]: ../master/mtme-logo.png "Music To My Ears"
 [examplewave]: ../master/examplewav.png "Transition from squarewave into sawtoothwave"
-[avatar]: https://avatars0.githubusercontent.com/u/18410581?v=3&s=96 "@quined_quales"
