@@ -18,7 +18,7 @@
 Our hope is that by sonifying a sequence of behavioural trials you might detect patterns of confidence and/or accuracy that would not otherwise be obvious were they represented in other modalities.
 
 ## Background
-**`MIDI-d'`** was developed with financial support from **Melbourne-Monash Consciousness Research** as part of the 'Music To My Ears' project. Visit **MMCR** on [Twitter](https://twitter.com/MMConsciousness) or [Facebook](https://www.facebook.com/mmcr.edu.au/) to learn more.
+**`MIDI-d'`** was developed with financial support from **Melbourne-Monash Consciousness Research** as part of the 'Music To My Ears' project. Visit **MMCR** on [Twitter](https://twitter.com/MMConsciousness), [Facebook](https://www.facebook.com/mmcr.edu.au/) or [the MMCR website](https://www.mmcr.edu.au/) to learn more.
 
 ## Required equipment
 
